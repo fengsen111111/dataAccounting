@@ -18,7 +18,7 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.5.5",
+  "libVersion": "3.5.6",
   "appid": "touristappid",
   "projectname": "成本核算系统",
   "condition": {},

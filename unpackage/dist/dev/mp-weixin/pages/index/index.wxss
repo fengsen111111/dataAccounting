@@ -7,8 +7,8 @@
 	text-align: center;
 	width: 90%;
 	margin: 60rpx auto;
-	padding-top: 30rpx;
-	padding-bottom: 30rpx;
+	padding-top: 27rpx;
+	padding-bottom: 27rpx;
 }
 .w-full{
 	width: 100%;

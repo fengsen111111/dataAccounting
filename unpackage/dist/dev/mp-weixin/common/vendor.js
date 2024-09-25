@@ -1557,7 +1557,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8923,7 +8923,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8944,14 +8944,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9047,7 +9047,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"成本核算系统","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9466,9 +9466,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 26 */
-/*!*******************************************************************!*\
-  !*** C:/Users/admin/Documents/HBuilderProjects/成本核算系统/pages.json ***!
-  \*******************************************************************/
+/*!*****************************************************!*\
+  !*** D:/Users/Desktop/送酒/dataAccounting/pages.json ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9612,9 +9612,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 33 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/admin/Documents/HBuilderProjects/成本核算系统/uni.promisify.adaptor.js ***!
-  \*********************************************************************************/
+/*!*******************************************************************!*\
+  !*** D:/Users/Desktop/送酒/dataAccounting/uni.promisify.adaptor.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9663,22 +9663,10 @@ uni.addInterceptor({
 /* 60 */,
 /* 61 */,
 /* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */
-/*!************************************************************************************************************************!*\
-  !*** C:/Users/admin/Documents/HBuilderProjects/成本核算系统/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
-  \************************************************************************************************************************/
+/* 63 */
+/*!**********************************************************************************************************!*\
+  !*** D:/Users/Desktop/送酒/dataAccounting/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10176,6 +10164,165 @@ var fontData = [{
 
 // export const fontData = JSON.parse<IconsDataItem>(fontDataJson)
 exports.fontData = fontData;
+
+/***/ }),
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */
+/*!*********************************************************!*\
+  !*** D:/Users/Desktop/送酒/dataAccounting/request/api.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getProjectDetail = exports.getProject = exports.getLogin = void 0;
+var _index = __webpack_require__(/*! ./index.js */ 75);
+// 引入 request 文件
+
+var base_url = 'https://www.rp119.net';
+var api = {
+  // 
+  LOGIN_USER: base_url + '/api/user/login',
+  // 
+  DATA_LIAT: base_url + '/api/user/getProject',
+  // 
+  DATA_LIAT_DETAILS: base_url + '/api/user/getProjectDetail' // 
+};
+
+//  ----------------------------------------------------------------------
+// 
+var getLogin = function getLogin(params) {
+  return (0, _index.post)(api.LOGIN_USER, params);
+};
+//  
+exports.getLogin = getLogin;
+var getProject = function getProject(params) {
+  return (0, _index.post)(api.DATA_LIAT, params);
+};
+// 
+exports.getProject = getProject;
+var getProjectDetail = function getProjectDetail(params) {
+  return (0, _index.post)(api.DATA_LIAT_DETAILS, params);
+};
+//  end ----------------------------------------------------------------------
+exports.getProjectDetail = getProjectDetail;
+
+/***/ }),
+/* 75 */
+/*!***********************************************************!*\
+  !*** D:/Users/Desktop/送酒/dataAccounting/request/index.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.post = exports.get = void 0;
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ 11));
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+// 创建请求函数
+var request = function request(options) {
+  // 请求拦截器
+  if (options.interceptRequest) {
+    options = options.interceptRequest(options);
+  }
+  uni.showLoading({
+    title: "加载中"
+  });
+  return new Promise(function (resolve, reject) {
+    uni.request(_objectSpread(_objectSpread({}, options), {}, {
+      success: function success(response) {
+        uni.hideLoading();
+        // 响应拦截器
+        if (options.interceptResponse) {
+          var newResponse = options.interceptResponse(response);
+          if (newResponse) {
+            resolve(newResponse);
+            return;
+          }
+        }
+        resolve(response);
+      },
+      fail: function fail(error) {
+        uni.hideLoading();
+        reject(error);
+      }
+    }));
+  });
+};
+
+// 默认拦截器示例
+var interceptRequest = function interceptRequest(options) {
+  // 在这里添加请求头或其他处理逻辑
+  options.header = _objectSpread(_objectSpread({}, options.header), {}, {
+    Authorization: 'Bearer token' // 示例：添加 token
+  });
+
+  return options;
+};
+var interceptResponse = function interceptResponse(response) {
+  // 例如，处理特定状态码
+  if (response.statusCode === 401) {
+    // 重定向到登录页面
+    uni.redirectTo({
+      url: '/pages/sonView/login/index'
+    });
+    return null; // 阻止后续的 resolve
+  }
+
+  return response;
+};
+
+// 封装的 GET 请求
+var get = function get(url) {
+  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  console.log('get');
+  return request(_objectSpread({
+    url: url,
+    data: data,
+    method: 'GET',
+    interceptRequest: interceptRequest,
+    interceptResponse: interceptResponse
+  }, options));
+};
+
+// 封装的 POST 请求
+exports.get = get;
+var post = function post(url) {
+  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  console.log('post');
+  return request(_objectSpread({
+    url: url,
+    data: data,
+    method: 'POST',
+    interceptRequest: interceptRequest,
+    interceptResponse: interceptResponse
+  }, options));
+};
+exports.post = post;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ })
 ]]);

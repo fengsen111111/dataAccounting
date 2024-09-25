@@ -1,6 +1,6 @@
 <template>
 	<view class="">
-		<view class="text-center h88 text36 col-black bg-whilt">
+		<view class="mt30 text-center h88 text36 col-black bg-whilt">
 			工程成本报价系统
 		</view>
 		<view class="text-center bgF5">
@@ -11,16 +11,16 @@
 			<view class="inputView">
 				<view class="flex items-center">
 					<image src="../../static/user.png" class="iconImg" mode=""></image>
-					<view class="text-left ml30" >
-						<input type="text" class="w-full" placeholder="输入账号"/>
+					<view class="text-left ml30" :class="nickname?'col-black':''">
+						<input type="text" v-model="nickname" class="w-full" placeholder="输入账号"/>
 					</view>
 				</view>
 			</view>
 			<view class="inputViewtwo">
 				<view class="flex items-center">
 					<image src="../../static/mima.png" class="iconImg" mode=""></image>
-					<view class="text-left ml30" >
-						<input type="text" class="w-full" placeholder="输入密码"/>
+					<view class="text-left ml30" :class="password?'col-black':''" >
+						<input type="password" v-model="password" class="w-full" placeholder="输入密码"/>
 					</view>
 				</view>
 			</view>
@@ -28,31 +28,43 @@
 				登录
 			</view>
 		</view>
-	
 	</view>
 </template>
 
 <script>
+	import { getLogin } from '@/request/api.js'
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				nickname:'jack',
+				password:'123456',
 			}
 		},
 		onLoad() {
-
 		},
 		methods: {
 			handleLogin(){
-				uni.navigateTo({
-					url:'/pages/list/index'
+				getLogin({
+					account: this.nickname,
+					password: this.password
+				}).then((res)=>{
+					console.log('登陆成功',res.data.data.userinfo);
+					uni.navigateTo({
+						url:'/pages/list/index'
+					})
+					localStorage.setItem('token',res.data.data.userinfo.token)
 				})
+				
 			}
 		}
 	}
 </script>
 
 <style>
+	.mt30{
+		margin-top: 30rpx;
+	}
 .btn{
 	background: #0997E6;
 	border-radius: 8rpx 8rpx 8rpx 8rpx;
@@ -61,8 +73,8 @@
 	text-align: center;
 	width: 90%;
 	margin: 60rpx auto;
-	padding-top: 30rpx;
-	padding-bottom: 30rpx;
+	padding-top: 27rpx;
+	padding-bottom: 27rpx;
 }
 .w-full{
 	width: 100%;
